@@ -9,7 +9,7 @@ interface ProfileRightContentProps {
 
 export default function ProfileRightContent({ materia, setMateria, semana, setSemana }: ProfileRightContentProps) {
     return (
-        <div className="flex flex-col gap-4 min-w-[220px]">
+        <div className="flex flex-col gap-4 w-full">
             {/* Card Vídeos upload */}
             <div className="bg-white rounded-lg px-6 py-4 flex items-center gap-3 shadow">
                 <div className="flex items-center gap-2">
@@ -58,6 +58,7 @@ export default function ProfileRightContent({ materia, setMateria, semana, setSe
                     </div>
                    
                     <button
+
                         className="w-full mt-2 py-2 rounded-md text-white font-semibold text-sm"
                         style={{
                             background: "linear-gradient(90deg, #1A2341 60%, #2B3A67 100%)",

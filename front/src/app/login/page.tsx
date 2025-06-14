@@ -69,7 +69,7 @@ const LoginPage = () => {
     return (
         <div className="flex flex-row h-screen">
             {/* Lado da logo */}
-            <div className="flex items-center justify-center w-1/2 bg-white">
+            <div className="flex flex-col md:flex-row items-center justify-center w-1/2 bg-white">
                 <Image src="/logo.png" alt="Logo" width={300} height={300} className="max-w-xs" priority />
             </div>
             {/* Lado do formulário */}

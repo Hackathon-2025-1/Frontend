@@ -12,8 +12,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         </div>
       </header>
       {/* Main content */}
-      <main className="flex-1 px-2 md:px-12 flex justify-start items-center bg-[#F4F4F4]">
-        <div className="w-full py-4 px-2 md:px-8">{children}</div>
+      <main className="flex-1 flex justify-center items-center bg-[#F4F4F4] px-2 md:px-8 py-8">
+        <div className="w-full max-w-screen-xl py-4">{children}</div>
       </main>
     </div>
   );

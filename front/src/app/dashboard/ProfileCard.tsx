@@ -27,7 +27,7 @@ export default function ProfileCard() {
         }
     }
   return (
-    <div className="bg-white rounded-xl shadow-lg p-8 max-w-md w-full mx-auto">
+    <div className="bg-white justify-self-center rounded-xl shadow-lg p-4 max-w-md w-full mx-auto">
       {/* Foto e nome */}
       <div className="flex items-center mb-6">
         <Image

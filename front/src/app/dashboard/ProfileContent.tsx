@@ -49,7 +49,7 @@ export default function ProfileContent({
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="flex flex-col w-[700px]">
+    <div className="flex flex-col w-full">
       {/* Saudação e data */}
       <div>
         <span className="text-3xl font-light text-gray-400">{dataHoje}</span>
@@ -123,7 +123,7 @@ export default function ProfileContent({
               </div>
             </div>
             {/* Inputs */}
-            <div className="flex gap-4 w-full">
+            <div className="flex flex-col md:flex-row gap-4 w-full">
               <input
                 type="text"
                 placeholder="QUAL MATÉRIA ?"
