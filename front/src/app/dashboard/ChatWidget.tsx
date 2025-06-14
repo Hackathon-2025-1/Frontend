@@ -65,7 +65,7 @@ export default function ChatWidget() {
             {/* Coluna da direita - Conteúdo */}
             <div className="flex-1 flex flex-col">
               {/* Cabeçalho Inteligência Artificial */}
-              <div className="py-6 text-center border-b border-gray-500/30 shadow-sm">
+              <div className="py-2 text-center">
                 <h3 className="text-gray-400 font-light ">Inteligência Artificial</h3>
               </div>
               
