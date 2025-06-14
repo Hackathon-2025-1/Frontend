@@ -3,17 +3,17 @@
 
 @theme {
   --font-manrope: 'Manrope', sans-serif;
-  --color-primary: #1f5d93;
-  --color-secondary: "#f17c2c";
-  --color-tertiary: "#20a2de";
+  --color-primary: #151143;
+  --color-secondary: #f17c2c;
+  --color-tertiary: #1F6599;
 }
 
 .authCard {
-  @apply min-w-[28%] min-h-[50%] bg-gray-500/3 rounded-lg shadow-lg p-6 flex flex-col items-center justify-center;
+  @apply min-w-[28%] min-h-[50%] bg-white/90 rounded-lg shadow-lg p-6 flex flex-col items-center justify-center;
 }
 
 body {
-  @apply h-[100vh] w-full font-manrope;
+  @apply h-[100vh] w-full font-manrope bg-gradient-to-br from-tertiary to-primary;
 }
 
 
