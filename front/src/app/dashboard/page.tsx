@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import ProfileCard from "./ProfileCard";
 import ProfileContent from "./ProfileContent";
 import ProfileRightContent from "./ProfileRightContent";
+import ChatWidget from "./ChatWidget";
 
 export default function DashboardPage() {
   const [materia, setMateria] = useState("");
@@ -19,6 +20,7 @@ export default function DashboardPage() {
         semana={semana}
         setSemana={setSemana}
       />
+      <ChatWidget />
     </div>
   );
 }
