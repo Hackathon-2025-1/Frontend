@@ -102,10 +102,10 @@ export default function ChatWidget() {
       {/* Botão flutuante circular */}
       <button 
         onClick={toggleChat}
-        className="justify-self-end cursor-pointer bg-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all"
+        className="border-secondary border-2 justify-self-end cursor-pointer bg-primary w-18 h-18 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all"
         aria-label={isOpen ? "Fechar chat" : "Abrir chat"}
       >
-        <span className="text-primary font-bold">AI</span>
+        <span className="text-secondary font-bold">IA</span>
       </button>
 
       {/* Estilos para animações */}
