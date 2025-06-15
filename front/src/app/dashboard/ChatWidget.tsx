@@ -33,40 +33,46 @@ export default function ChatWidget() {
       {/* Widget de chat aberto - sempre visível inicialmente */}
       {isOpen && (
         <div 
-          className={`bg-white rounded-lg shadow-lg w-[400px] mb-4 overflow-hidden 
+          className={`bg-white rounded-lg w-[500px] mb-4 overflow-hidden 
                      ${animateIn 
-                       ? 'chat-popup-active opacity-100 scale-100' 
-                       : 'chat-popup-inactive opacity-0 scale-75'}`}
-          style={{ boxShadow: "0px 4px 15px rgba(0,0,0,0.1)" }}
+                       ? 'fade-up-active opacity-100 transform translate-y-0' 
+                       : 'fade-up-inactive opacity-0 transform translate-y-10'}`}
+          style={{ 
+            boxShadow: "0px 2px 10px rgba(0,0,0,0.08)", 
+            transition: "all 0.3s ease-out",
+            border: "1px solid rgba(0,0,0,0.06)"
+          }}
         >
           {/* Layout em duas colunas */}
-          <div className="flex h-[400px]">
-            {/* Coluna da esquerda - Menu */}
-            <div className="w-[130px] border-r border-gray-500/30 shadow-sm flex flex-col">
+          <div className="flex h-[450px] relative">
+            <div className="w-[170px] flex flex-col self-end ">
               {/* Cabeçalho Histórico */}
-              <div className="py-6 text-center border-b border-gray-500/30 shadow-sm">
+              <div className="py-6 text-center">
                 <h3 className="font-semibold text-gray-800">Histórico</h3>
               </div>
               
               {/* Itens de menu */}
               <div className="flex flex-col">
-                <button className="py-4 px-2 text-center border-b border-gray-500/30 shadow-sm text-gray-500 text-xs hover:bg-gray-50">
+                <button className="py-4 px-2 text-center border-t text-gray-500 text-xs hover:bg-gray-50">
                   Verificação de atividade
                 </button>
-                <button className="py-4 px-2 text-center border-b border-gray-500/30 shadow-sm text-gray-500 text-xs hover:bg-gray-50">
+                <button className="py-4 px-2 text-center border-t text-gray-500 text-xs hover:bg-gray-50">
                   Resumo do conteúdo
                 </button>
               </div>
-              
-              {/* Espaço vazio com borda no final */}
-              <div className="flex-grow"></div>
             </div>
+            
+            {/* Borda vertical que vai do topo até o final */}
+            <div 
+              className="absolute top-0 bottom-0 w-px bg-gray-200" 
+              style={{ left: "170px" }}
+            ></div>
             
             {/* Coluna da direita - Conteúdo */}
             <div className="flex-1 flex flex-col">
               {/* Cabeçalho Inteligência Artificial */}
-              <div className="py-2 text-center">
-                <h3 className="text-gray-400 font-light ">Inteligência Artificial</h3>
+              <div className="py-6 text-center">
+                <h3 className="text-gray-400 font-light">Inteligência Artificial</h3>
               </div>
               
               {/* Área principal - flex-grow para ocupar todo espaço disponível */}
@@ -96,11 +102,22 @@ export default function ChatWidget() {
       {/* Botão flutuante circular */}
       <button 
         onClick={toggleChat}
-        className="cursor-pointer justify-self-end bg-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all"
+        className="justify-self-end cursor-pointer bg-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all"
         aria-label={isOpen ? "Fechar chat" : "Abrir chat"}
       >
         <span className="text-primary font-bold">AI</span>
       </button>
+
+      {/* Estilos para animações */}
+      <style jsx>{`
+        .fade-up-active {
+          transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+        }
+        
+        .fade-up-inactive {
+          transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+        }
+      `}</style>
     </div>
   );
 }

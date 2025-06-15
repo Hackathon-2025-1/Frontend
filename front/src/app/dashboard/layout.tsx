@@ -8,7 +8,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       {/* Header */}
       <header className="flex items-center justify-between px-8 py-2 bg-gradient-to-tr from-tertiary to-primary shadow-md">
         <div className="flex items-center gap-3">
-          <span className="text-2xl font-bold text-white tracking-tight">DevRUSH</span>
+          <span className="text-2xl font-bold text-white tracking-tight">EduWise</span>
         </div>
       </header>
       {/* Main content */}
