@@ -2,6 +2,7 @@ import { NextConfig } from 'next'
 
 const config: NextConfig = {
   output: 'standalone',
+  devIndicators: false,
   images: {
     domains: [process.env.DOMAIN || 'localhost'],
   },
